@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debadutta Barik-Port Folio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        body {
+            background-color: rgb(72, 140, 8);
+            color: azure;
+            font-family: 'Poppins', sans-serif;
+            background-image: url(5353146.jpg);
+            background-size: 100%;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: -1;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100px;
+            background-color: red;
+        }
+
+        nav ol {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            list-style: none;
+            margin: 0 30px;
+        }
+
+        nav li a {
+            text-decoration: none;
+            color: white
+        }
+
+        nav li a:hover {
+            text-decoration: none;
+            color: orange;
+            font-size: 110%;
+        }
+
+        .left {
+            font-size: 2.5rem;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .first {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: 300px;
+        }
+
+        .first>div {
+            width: 30%;
+        }
+
+        .leftsection {
+            font-size: 3.3rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-left: -30%;
+        }
+
+        .leftsection .btn {
+            padding: 12px;
+            background-color: rgb(157, 28, 28);
+            color: white;
+            border: 2px solid white;
+            border-radius: 7px;
+            font-size: 30px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .rightsection img {
+            margin: 10px 10px;
+            width: 130%;
+            margin-left: 400px;
+        }
+
+        .purple {
+            color: red;
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        #element {
+            color: red;
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 50px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        main hr {
+            border: 0;
+            background-color: red;
+            height: 1px;
+            margin: 40px 80px;
+        }
+
+        .secondSection {
+            height: 80vh;
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        .secondSection h1 {
+            font-size: 1.9rem;
+            font-family: cursive;
+        }
+
+        .secondSection .box {
+            background-color: white;
+            width: 76vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .secondSection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 100px;
+            margin-right: 400px;
+        }
+
+        .image-top {
+            width: 95px;
+            position: relative;
+            top: -80px;
+            left: -48px;
+        }
+
+        .image-top1 {
+            width: 95px;
+            position: relative;
+            top: -60px;
+            left: -48px;
+        }
+
+        .vertical-title {
+            position: relative;
+            font-size: 15px;
+        }
+
+        .vertical-title1 {
+            position: relative;
+            top: 30px;
+            font-size: 15px;
+        }
+
+        .vertical-desc {
+            width: 200px;
+            color: gray;
+            font-size: 12px;
+            word-wrap: break-word;
+            line-height: 1.5;
+            margin-top: 10px;
+        }
+
+        .vertical-desc1 {
+            width: 200px;
+            color: gray;
+            font-size: 12px;
+            word-wrap: break-word;
+            line-height: 1.5;
+            margin-top: 10px;
+            position: relative;
+            bottom: -30px;
+        }
+
+        footer {
+            background-color: red;
+            padding: 20px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-first {
+            flex: 1;
+            text-align: left;
+        }
+
+        .footer-second {
+            flex: 1;
+            text-align: center;
+        }
+
+        .footer-second ul {
+            list-style: none;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: black;
+            font-weight: 500;
+        }
+
+        /* Responsive Download Resume Button */
+        @media (max-width: 768px) {
+            .leftsection .btn {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 10px;
+                font-size: 20px;
+                text-decoration: none;
+            }
+        }
+
+        /* Styling for button container and buttons */
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            /* Adds spacing between the buttons */
+            margin-top: 20px;
+        }
+
+        .button-container .btn {
+            padding: 12px;
+            background-color: rgb(157, 28, 28);
+            color: white;
+            border: 2px solid white;
+            border-radius: 7px;
+            font-size: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .button-container .btn:hover {
+            background-color: white;
+            color: rgb(157, 28, 28);
+            border: 2px solid rgb(157, 28, 28);
+        }
+
+        @media (max-width: 768px) {
+            .button-container .btn {
+                width: 100%;
+                /* Buttons will take full width on smaller screens */
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Debadutta's Port-Folio</div>
+            <div class="right">
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="resume.pdf" target="_blank">Resume</a></li>
+                </ol>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="first">
+            <div class="leftsection">Hi My name is <span class="purple">Debadutta Barik</span>
+                <div>I am a passionate
+                    <span id="element"></span>
+                </div>
+                <div class="button-container">
+                    <a href="resume.pdf" class="btn" download>Download Resume</a>
+                    <a href="https://github.com/DebaduttaBarik" class="btn" target="_blank">Visit GitHub</a>
+                </div>
+            </div>
+            <div class="rightsection"><img src="view-3d-man-holding-laptop.png" alt=""></div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <span class="text-gray">Academics so far</span>
+            <h1>Educational Background</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="school.png" alt="">
+                    <div class="vertical-title">St.Pauls School(2008-2020)</div>
+                    <div class="vertical-desc">I completed my primary and secondary education at **St. Paul's School**,
+                        where I developed a strong academic foundation and a passion for learning. Excelling in the
+                        **Science stream**, I secured an impressive **94% in the Matriculation exam**, a testament to my
+                        dedication, discipline, and consistent hard work during my schooling years.</div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="school.png" alt="">
+                    <div class="vertical-title">Doon International School(2020-2022)</div>
+                    <div class="vertical-desc">I pursued my higher secondary education at **Doon International School,
+                        Bhubaneswar**, where I continued to nurture my interest in the **Science stream**. With a focus
+                        on both academics and personal growth, I achieved a commendable **75%** in my board exams,
+                        reflecting my dedication and determination during this crucial phase of my education.</div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top1" src="school.png" alt="">
+                    <div class="vertical-title1">SOA Institute Of Technology(2022-Present)</div>
+                    <div class="vertical-desc1">I am currently pursuing my **B.Tech in Computer Science** at **SOA
+                        Institute of Technical Education and Research (ITER), Bhubaneswar**, where I am in my **3rd
+                        year**. With a focus on academics and practical projects, I have maintained a **current GPA of
+                        7.5**, reflecting my consistent effort and commitment to learning.</div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer">
+                <div class="footer-first">
+                    <p>Email me at: debaduttabarik22@gmail.com</p>
+                </div>
+                <div class="footer-second">
+                    <ul>
+                        <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+                        <li><a href="https://github.com">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-rights">
+                <p>&copy; 2024 Debadutta Barik. All Rights Reserved</p>
+            </div>
+        </footer>
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+        <script>
+            var typed = new Typed('#element', {
+                strings: ['Web Developer', 'Video Editor', 'Web Designer'],
+                typeSpeed: 50,
+            });
+        </script>
+    </main>
+</body>
+
+</html>
